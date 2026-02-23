@@ -1,26 +1,318 @@
-@import "tailwindcss";
+::selection{
+  color: var(--accent); /* same hue as your accent */
+  background: var(--bg);
+}
+
+::-moz-selection{
+  color: var(--accent);
+  background: var(--bg);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #070a12;
+  --card: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --dim: rgba(255, 255, 255, 0.62);
+  --accent: #7fe7ff;
+
+  --scale: 0.85;  /* tweak between 0.82–0.9 */
+  --pad: calc(20px * var(--scale));
+  --gap: calc(14px * var(--scale));
+  --radius: calc(18px * var(--scale));
+
+  --h1: calc(44px * var(--scale));
+  --intro: calc(18px * var(--scale));
+
+  --cardPad: calc(12px * var(--scale));
+  --miniH: calc(120px * var(--scale));
+  --miniFont: calc(12px * var(--scale));
+  --tagFont: calc(12px * var(--scale));
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 3rem;
+    background:
+    var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px var(--pad) 80px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dim {
+  color: var(--dim);
+}
+
+.hero {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 28px;
+}
+
+.heroTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.name {
+  margin: 0;
+  font-size: var(--h1);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.iconBtn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(127, 231, 255, 0.35);
+  background: rgba(127, 231, 255, 0.06);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.intro {
+  margin: 0;
+  color: var(--dim);
+  max-width: 75ch;
+  line-height: 1.5;
+  font-size: var(--intro);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(calc(320px * var(--scale)), 1fr));
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: var(--cardPad);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 160px;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(127, 231, 255, 0.25);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cornerRow {
+  margin-top: auto;
+  /* <- pins to bottom consistently */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+
+.corner {
+  font-size: var(--tagFont);
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--dim);
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+}
+
+/* Make bottom-right label "active" when the TILE is hovered */
+.card:hover .corner {
+  border-color: rgba(127, 231, 255, 0.22);
+  color: var(--text);
+  background: rgba(127, 231, 255, 0.06);
+}
+
+/* Accessibility: keyboard focus shows the same styling as hover */
+.card:focus-visible {
+  outline: 2px solid rgba(127, 231, 255, 0.35);
+  outline-offset: 2px;
+}
+
+.cardHead {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.mini{
+  border: 1px dashed rgba(127,231,255,0.25);
+  border-radius: 16px;
+  background: rgba(0,0,0,0.15);
+  padding: 10px;
+  height: var(--miniH);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ASCII at top, label at bottom */
+  gap: 8px;
+
+  transition: border-color 140ms ease, background 140ms ease;
+}
+
+.miniPre{
+  margin: 0;
+  white-space: pre;   /* keep diagram shape */
+  font-size: var(--miniFont);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  
+}
+
+.miniLabel{
+  display: flex;
+  align-items: end;
+  font-size: var(--miniFont);
+  opacity: 0.85;
+  
+}
+
+/* Hover: make ASCII + label go accent */
+.card:hover .mini{
+  border-color: rgba(127,231,255,0.55);
+  background: rgba(127,231,255,0.04);
+}
+
+.card:hover .mini .dim {
+  color: #ecf5ff;
+}
+
+.miniLines {
+  margin-top: 10px;
+  display: grid;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+
+}
+
+.desc {
+  margin: 8px 0 0;
+  color: var(--dim);
+  line-height: 1.5;
+  font-size: 12px;
+  
+}
+
+.tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: var(--tagFont);
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--dim);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.link {
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  color: var(--dim);
+}
+
+.link:hover {
+  border-color: rgba(127, 231, 255, 0.22);
+  color: var(--text);
+  background: rgba(127, 231, 255, 0.06);
+}
+
+@media (max-width: 520px) {
+  .cardHead {
+    grid-template-columns: 1fr;
+  }
+
+  .mini {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .iconBtn {
+    transition: none;
+  }
+
+  .card:hover,
+  .iconBtn:hover {
+    transform: none;
+  }
 }
