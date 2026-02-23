@@ -1,5 +1,5 @@
 ::selection{
-  color: var(--accent); /* same hue as your accent */
+  color: var(--accent);
   background: var(--bg);
 }
 
@@ -16,7 +16,7 @@
   --dim: rgba(255, 255, 255, 0.62);
   --accent: #7fe7ff;
 
-  --scale: 0.85;  /* tweak between 0.82–0.9 */
+  --scale: 0.85;
   --pad: calc(20px * var(--scale));
   --gap: calc(14px * var(--scale));
   --radius: calc(18px * var(--scale));
@@ -155,7 +155,6 @@ a:hover {
 
 .cornerRow {
   margin-top: auto;
-  /* <- pins to bottom consistently */
   display: flex;
   justify-content: space-between;
   padding-top: 6px;
@@ -170,14 +169,12 @@ a:hover {
   transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
 }
 
-/* Make bottom-right label "active" when the TILE is hovered */
 .card:hover .corner {
   border-color: rgba(127, 231, 255, 0.22);
   color: var(--text);
   background: rgba(127, 231, 255, 0.06);
 }
 
-/* Accessibility: keyboard focus shows the same styling as hover */
 .card:focus-visible {
   outline: 2px solid rgba(127, 231, 255, 0.35);
   outline-offset: 2px;
@@ -208,7 +205,7 @@ a:hover {
 
 .miniPre{
   margin: 0;
-  white-space: pre;   /* keep diagram shape */
+  white-space: pre;
   font-size: var(--miniFont);
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -224,7 +221,6 @@ a:hover {
   
 }
 
-/* Hover: make ASCII + label go accent */
 .card:hover .mini{
   border-color: rgba(127,231,255,0.55);
   background: rgba(127,231,255,0.04);
@@ -246,7 +242,6 @@ a:hover {
   margin: 0;
   font-size: 16px;
   letter-spacing: -0.01em;
-
 }
 
 .desc {

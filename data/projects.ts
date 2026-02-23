@@ -72,18 +72,18 @@ ascii: `[WebGL]─►[tex]
 
 ◉ TTS ◄─▣ CF`,
   },
-  {
-    id: "smart-resume",
-    title: "Smart Resume",
-    description: "Resume analyzer + tailored bullets/cover letters with structured output.",
-    tags: ["Python", "JavaScript", "NLP", "Scoring"],
-    primary: { label: "Writeup", href: "#" },
-    ascii: `[docx]  [site]
-   │      ▼
-   │    [reqs]
-   ▼   ↙ 
-[parse] 
-   ▼
-[weigh]►[docx]`,
-  },
+//   {
+//     id: "smart-resume",
+//     title: "Smart Resume",
+//     description: "Resume analyzer + tailored bullets/cover letters with structured output.",
+//     tags: ["Python", "JavaScript", "NLP", "Scoring"],
+//     primary: { label: "Writeup", href: "#" },
+//     ascii: `[docx]  [site]
+//    │      ▼
+//    │    [reqs]
+//    ▼   ↙ 
+// [parse] 
+//    ▼
+// [weigh]►[docx]`,
+//   },
 ];
