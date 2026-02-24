@@ -98,7 +98,7 @@ export default function Page() {
             <a
               className="iconBtn"
               aria-label="Download resume"
-              href="/Adam_Kimmins_Resume.pdf"
+              href="Adam_Kimmins_Resume.pdf"
               download
               title="Download resume"
             >
