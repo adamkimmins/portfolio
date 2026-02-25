@@ -130,7 +130,7 @@ a:hover {
 .grid {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(calc(320px * var(--scale)), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   padding-top: 14px;
   border-top: 1px solid var(--border);
 }
@@ -290,12 +290,8 @@ a:hover {
 }
 
 @media (max-width: 520px) {
-  .cardHead {
-    grid-template-columns: 1fr;
-  }
-
-  .mini {
-    min-height: auto;
+  body{
+    margin: 0;
   }
 }
 
