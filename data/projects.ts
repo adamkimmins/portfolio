@@ -16,9 +16,23 @@ export const projects: Project[] = [
   //   tags: ["C++", "CLI", "Build"],
   //   links: [{ label: "GitHub", href: "#" }],
   // },
+    {
+    id: "smart-resume",
+    title: "Smart Resume",
+    description: "Resume creation tool with skill match scoring.",
+    tags: ["IndexedDB", "JavaScript", "Mammoth.js",],
+    primary: { label: "0.1.0 releases in April", href: "#" },
+    ascii: `[file]  [site]
+   │      ▼
+   │    [reqs]
+   ▼   ↙ 
+[parse] 
+   ▼
+[weigh]►[file]`,
+  },
   {
     id: "item-tracker",
-    title: "Item Tracker (C++)",
+    title: "Item Tracker",
     description: "Fast local item sorter and look-up.",
     tags: ["C++", "CLI", "File I/O", "Maps"],
     primary: { label: "GitHub", href: "https://github.com/adamkimmins/item-tracker" },
@@ -71,19 +85,5 @@ ascii: `[WebGL]─►[tex]
 │          ▼
 
 ◉ TTS ◄─▣ CF`,
-  },
-//   {
-//     id: "smart-resume",
-//     title: "Smart Resume",
-//     description: "Resume analyzer + tailored bullets/cover letters with structured output.",
-//     tags: ["Python", "JavaScript", "NLP", "Scoring"],
-//     primary: { label: "Writeup", href: "#" },
-//     ascii: `[docx]  [site]
-//    │      ▼
-//    │    [reqs]
-//    ▼   ↙ 
-// [parse] 
-//    ▼
-// [weigh]►[docx]`,
-//   },
+  }
 ];
