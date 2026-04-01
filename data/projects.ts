@@ -16,20 +16,6 @@ export const projects: Project[] = [
   //   tags: ["C++", "CLI", "Build"],
   //   links: [{ label: "GitHub", href: "#" }],
   // },
-    {
-    id: "smart-resume",
-    title: "Smart Resume",
-    description: "Resume creation tool with skill match scoring.",
-    tags: ["IndexedDB", "JavaScript", "Mammoth.js",],
-    primary: { label: "0.1.0 releases in April", href: "#" },
-    ascii: `[file]  [site]
-   │      ▼
-   │    [reqs]
-   ▼   ↙ 
-[parse] 
-   ▼
-[weigh]►[file]`,
-  },
   {
     id: "item-tracker",
     title: "Item Tracker",
@@ -85,5 +71,19 @@ ascii: `[WebGL]─►[tex]
 │          ▼
 
 ◉ TTS ◄─▣ CF`,
-  }
+  },
+  {
+    id: "smart-resume",
+    title: "Smart Resume",
+    description: "Resume creation tool with skill match scoring.",
+    tags: ["IndexedDB", "JavaScript", "Mammoth.js",],
+    primary: { label: "0.1.0 releases in April", href: "#" },
+    ascii: `[file]  [site]
+   │      ▼
+   │    [reqs]
+   ▼   ↙ 
+[parse] 
+   ▼
+[weigh]►[file]`,
+  },
 ];
