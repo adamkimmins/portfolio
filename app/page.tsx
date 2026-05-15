@@ -108,7 +108,7 @@ export default function Page() {
         </div>
 
         <p className="intro">
-          CS student building practical systems: C++ tooling, AI apps, and web UX.
+          CS student building low-level systems: C++ architecture, class design, and AI tools.
         </p>
       </header>
 
@@ -127,8 +127,8 @@ export default function Page() {
               <div className="cardHead">
                 <div className="mini" aria-hidden="true">
                   <pre className="miniPre mono dim">{p.ascii}</pre>
-
                 </div>
+
                 <div className="meta">
                   <h2 className="title">{p.title}</h2>
                   <p className="desc">{p.description}</p>

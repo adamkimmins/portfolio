@@ -9,7 +9,7 @@
 }
 
 :root {
-  --bg: #070a12;
+  --bg: #0a0a0e;
   --card: rgba(255, 255, 255, 0.03);
   --border: rgba(255, 255, 255, 0.10);
   --text: rgba(255, 255, 255, 0.92);
@@ -137,8 +137,8 @@ a:hover {
 
 .card {
   border: 1px solid var(--border);
-  background: var(--card);
   border-radius: var(--radius);
+  background: var(--card);
   padding: var(--cardPad);
   display: flex;
   flex-direction: column;
