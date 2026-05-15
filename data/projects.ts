@@ -10,7 +10,21 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-    {
+  {
+    id: "telemetry-sim",
+    title: "Satellite Telemetry Simulator",
+    description: "QML GUI connected with C++ satellite telemetry simulation: real-time telemtry transfer through dual-modal WSL2 data pipelines.",
+    tags: ["C++",  "QT Quick", "WSL2", "File I/O", "Threads", "CLI"],
+    primary: { label: "GitHub", href: "https://github.com/adamkimmins/satellite-telemetry-simulator" },
+    lang: ["C++"],
+    ascii: `Backend <-Pipe
+  |       ▲
+ FSM      |
+  |      ?in
+  ▼       |
+ Pipe--> GUI`
+  },
+      {
     id: "telemetry-emb",
     title: "ESP32 Telemetry Transmitter",
     description: "Embedded FSM transmitter on Heltec V4 ESP32-S3: LoRa RF signalling, OLED status display, and hardware button I/O managed through a State Design Pattern architecture.",
@@ -26,20 +40,6 @@ export const projects: Project[] = [
  Transmitter
  `
 },
-  {
-    id: "telemetry-sim",
-    title: "Satellite Telemetry Simulator",
-    description: "QML GUI connected with C++ satellite telemetry simulation: real-time telemtry transfer through dual-modal WSL2 data pipelines.",
-    tags: ["C++",  "QT Quick", "WSL2", "File I/O", "Threads", "CLI"],
-    primary: { label: "GitHub", href: "https://github.com/adamkimmins/satellite-telemetry-simulator" },
-    lang: ["C++"],
-    ascii: `Backend <-Pipe
-  |       ▲
- FSM      |
-  |      ?in
-  ▼       |
- Pipe--> GUI`
-  },
   {
     id: "item-tracker",
     title: "Item Tracker",
