@@ -32,7 +32,7 @@ Heltec V4 Board
     title: "IEEE PLC Control Demo",
     description: "Built an executable program for a PLC demonstration at an IEEE meeting featuring RoviSys engineers. Working from the hardware schematics we configured various input-output to the HOA (Hand-Off-Auto) switch.",
     tags: ["PLC", "Ladder-Logic", "Embedded", "HOA Control", "Electrical schematics"],
-    primary: { label: "GitHub", href: "https://github.com/adamkimmins/HeltecV4Unofficial" },
+    primary: { label: "GitHub", href: "#" },
     lang: ["Ladder Logic"],
     ascii: `  Operator
    │     ▲
