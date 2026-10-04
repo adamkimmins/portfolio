@@ -108,7 +108,7 @@ export default function Page() {
         </div>
 
         <p className="intro">
-          CS student building low-level systems: C++ architecture, class design, and AI tools.
+          Electrical Engineering undergrad at the Ohio State University building low-level systems: including embedded systems, C++ architecture, and class design.
         </p>
       </header>
 
