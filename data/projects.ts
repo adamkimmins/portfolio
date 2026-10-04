@@ -10,22 +10,55 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-      {
+ 
+{
     id: "telemetry-emb",
-    title: "ESP32 Telemetry Transmitter",
-    description: "Embedded FSM transmitter on Heltec V4 ESP32-S3: LoRa RF signalling, OLED status display, and hardware button I/O managed through a State Design Pattern architecture.",
-    tags: ["C++", "C", "Embedded", "LoRa", "PlatformIO", "I/O", "Signal Processing"],
-    primary: { label: "GitHub", href: "https://github.com/adamkimmins/ESP32-telemetry-transmitter" },
-    lang: ["C++"],
-    ascii: `  Receiver
+    title: "Heltec ESP32-S3 V4.3 HAL",
+    description: "Developed an open-source Hardware Abstraction Layer (HAL) and helper library for Heltec 32 V4 boards, simplifying initialization and state management for board components",
+    tags: ["C", "C++", "Embedded", "PlatformIO", "I/O", "Signal Processing"],
+    primary: { label: "GitHub", href: "https://github.com/adamkimmins/HeltecV4Unofficial" },
+    lang: ["C"],
+    ascii: `  Platform
    │     ▲
    ▼     |
- LoRa & WiFi
+ HAL & Helper
    │     ▲
    ▼     │
- Transmitter
+Heltec V4 Board
  `
 },
+{
+    id: "plc-emb",
+    title: "IEEE PLC Control Demo",
+    description: "Built an executable program for a PLC demonstration at an IEEE meeting featuring RoviSys engineers. Working from the hardware schematics we configured various input-output to the HOA (Hand-Off-Auto) switch.",
+    tags: ["PLC", "Ladder-Logic", "Embedded", "HOA Control", "Electrical schematics"],
+    primary: { label: "GitHub", href: "https://github.com/adamkimmins/HeltecV4Unofficial" },
+    lang: ["Ladder Logic"],
+    ascii: `  Operator
+   │     ▲
+   ▼     |
+  HOA  System
+   │     ▲
+   ▼     │
+     PLC
+ `
+}, 
+// {
+//     id: "telemetry-emb",
+//     title: "ESP32 Telemetry Transmitter",
+//     description: "Embedded FSM transmitter on Heltec V4 ESP32-S3: LoRa RF signalling, OLED status display, and hardware button I/O managed through a State Design Pattern architecture.",
+//     tags: ["C++", "C", "Embedded", "LoRa", "PlatformIO", "I/O", "Signal Processing"],
+//     primary: { label: "GitHub", href: "https://github.com/adamkimmins/ESP32-telemetry-transmitter" },
+//     lang: ["C++"],
+//     ascii: `  Receiver
+//    │     ▲
+//    ▼     |
+//  LoRa & WiFi
+//    │     ▲
+//    ▼     │
+//  Transmitter
+//  `
+// },
 {
     id: "telemetry-sim",
     title: "Satellite Telemetry Simulator",
