@@ -31,13 +31,13 @@ Heltec V4 Board
     id: "plc-emb",
     title: "IEEE PLC Control Demo",
     description: "Built an executable program for a PLC demonstration at an IEEE meeting featuring RoviSys engineers. Working from the hardware schematics we configured various input-output to the HOA (Hand-Off-Auto) switch.",
-    tags: ["PLC", "Ladder-Logic", "Embedded", "HOA Control", "Electrical schematics"],
-    primary: { label: "GitHub", href: "#" },
+    tags: ["PLC", "Electrical schematics", "Ladder-Logic", "Embedded", "HOA Control",],
+    primary: { label: "Demo", href: "#" },
     lang: ["Ladder Logic"],
     ascii: `  Operator
    │     ▲
    ▼     |
-  HOA  System
+ HOA  System
    │     ▲
    ▼     │
      PLC
